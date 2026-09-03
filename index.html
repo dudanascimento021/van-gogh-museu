@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vincent van Gogh — Uma vida em cores</title>
 
 <style>
@@ -17,21 +18,34 @@
 --yellow:#ffd43b;
 --blue:#2955d9;
 --orange:#e98238;
---green:#8eb34b
+--green:#8eb34b;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 background:var(--bg);
 color:var(--text);
 font-family:Inter,Arial,sans-serif;
-overflow-x:hidden
+overflow-x:hidden;
 }
 
-a{text-decoration:none;color:inherit}
-button{font:inherit}
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button{
+font:inherit;
+}
 
 body:before{
 content:"";
@@ -41,7 +55,7 @@ pointer-events:none;
 z-index:99;
 opacity:.035;
 background-image:radial-gradient(#fff .6px,transparent .8px);
-background-size:5px 5px
+background-size:5px 5px;
 }
 
 header{
@@ -56,17 +70,17 @@ align-items:center;
 justify-content:space-between;
 border-bottom:1px solid transparent;
 background:linear-gradient(#07090dee,transparent);
-transition:.3s
+transition:.3s;
 }
 
 header.scrolled{
 background:#07090bf5;
-border-color:var(--line)
+border-color:var(--line);
 }
 
 .logo{
 font:600 24px "Playfair Display";
-letter-spacing:4px
+letter-spacing:4px;
 }
 
 nav{
@@ -74,10 +88,12 @@ display:flex;
 gap:25px;
 font:8px "DM Mono";
 letter-spacing:2px;
-color:#aaa
+color:#aaa;
 }
 
-nav a:hover{color:#fff}
+nav a:hover{
+color:#fff;
+}
 
 .hero{
 min-height:100vh;
@@ -88,7 +104,7 @@ position:relative;
 overflow:hidden;
 background:
 radial-gradient(circle at 78% 45%,#244fe738,transparent 28%),
-radial-gradient(circle at 20% 80%,#ffd43b18,transparent 28%)
+radial-gradient(circle at 20% 80%,#ffd43b18,transparent 28%);
 }
 
 .stars{
@@ -96,42 +112,46 @@ position:absolute;
 inset:0;
 opacity:.13;
 background-image:radial-gradient(#fff 1px,transparent 1.4px);
-background-size:90px 90px
+background-size:90px 90px;
 }
 
 .hero-copy{
 position:relative;
 z-index:2;
-max-width:800px
+max-width:800px;
 }
 
 .eyebrow{
 font:8px "DM Mono";
 letter-spacing:3px;
-color:#777
+color:#777;
 }
 
 .hero h1{
 font:600 clamp(75px,13vw,170px)/.72 "Playfair Display";
 letter-spacing:-7px;
-margin:33px 0 42px
+margin:33px 0 42px;
 }
 
-.hero h1 em{color:var(--yellow)}
+.hero h1 em{
+color:var(--yellow);
+}
 
 .outline{
 color:transparent;
--webkit-text-stroke:1px #eee
+-webkit-text-stroke:1px #eee;
 }
 
 .hero p{
 max-width:570px;
 color:#908e89;
 font-size:13px;
-line-height:2
+line-height:2;
 }
 
-.hero p strong{color:#eee}
+.hero p strong{
+color:#eee;
+}
 
 .hero-img{
 position:absolute;
@@ -142,11 +162,11 @@ height:63vh;
 object-fit:cover;
 transform:rotate(4deg);
 box-shadow:35px 45px 100px #000;
-transition:.6s
+transition:.6s;
 }
 
 .hero-img:hover{
-transform:rotate(0) scale(1.03)
+transform:rotate(0) scale(1.03);
 }
 
 .btn{
@@ -156,12 +176,12 @@ padding:15px 20px;
 border:1px solid #666;
 font:8px "DM Mono";
 letter-spacing:2px;
-transition:.3s
+transition:.3s;
 }
 
 .btn:hover{
 background:var(--paper);
-color:#111
+color:#111;
 }
 
 .ticker{
@@ -169,121 +189,136 @@ background:var(--yellow);
 color:#111;
 padding:14px 0;
 overflow:hidden;
-white-space:nowrap
+white-space:nowrap;
 }
 
 .ticker span{
 display:inline-block;
 font:italic 22px "Playfair Display";
-animation:marquee 28s linear infinite
+animation:marquee 28s linear infinite;
 }
 
 @keyframes marquee{
-to{transform:translateX(-50%)}
+to{
+transform:translateX(-50%);
+}
 }
 
-section{padding:125px 7%}
+section{
+padding:125px 7%;
+}
 
 .two{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:90px
+gap:90px;
 }
 
 .title{
 font:500 clamp(55px,7vw,100px)/.82 "Playfair Display";
-margin-top:20px
+margin-top:20px;
 }
 
-.title em{color:var(--yellow)}
+.title em{
+color:var(--yellow);
+}
 
 .copy{
 color:#918d87;
 font-size:12px;
-line-height:2
+line-height:2;
 }
 
-.copy p+p{margin-top:20px}
-.copy strong{color:#eee}
+.copy p+p{
+margin-top:20px;
+}
+
+.copy strong{
+color:#eee;
+}
 
 .stats{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 border-top:1px solid var(--line);
-margin-top:45px
+margin-top:45px;
 }
 
 .stat{
 padding:22px 18px 22px 0;
-border-right:1px solid var(--line)
+border-right:1px solid var(--line);
 }
 
 .stat:last-child{
 border:0;
-padding-left:18px
+padding-left:18px;
 }
 
-.stat:nth-child(2){padding-left:18px}
+.stat:nth-child(2){
+padding-left:18px;
+}
 
 .stat small{
 font:8px "DM Mono";
-color:#777
+color:#777;
 }
 
 .stat b{
 display:block;
 font:500 28px "Playfair Display";
-margin:10px 0 5px
+margin:10px 0 5px;
 }
 
 .stat span{
 font-size:9px;
-color:#777
+color:#777;
 }
 
 .dark{
 background:#0d1015;
-border-block:1px solid var(--line)
+border-block:1px solid var(--line);
 }
 
 .timeline{
 margin-top:60px;
 border-top:1px solid #333;
 display:grid;
-grid-template-columns:repeat(5,1fr)
+grid-template-columns:repeat(5,1fr);
 }
 
 .time{
 min-height:350px;
 padding:25px 22px 20px 0;
-border-right:1px solid #292d33
+border-right:1px solid #292d33;
 }
 
-.time:last-child{border:0}
+.time:last-child{
+border:0;
+}
 
 .time small{
 font:8px "DM Mono";
 color:var(--yellow);
-letter-spacing:2px
+letter-spacing:2px;
 }
 
 .time h3{
 font:500 29px "Playfair Display";
-margin:58px 15px 13px 0
+margin:58px 15px 13px 0;
 }
 
 .time p{
 font-size:9px;
 line-height:1.9;
 color:#777;
-padding-right:15px
+padding-right:15px;
 }
 
 .works-head{
 display:flex;
 justify-content:space-between;
 align-items:end;
-margin-bottom:48px
+margin-bottom:48px;
 }
 
 .works-head p{
@@ -291,13 +326,13 @@ max-width:410px;
 text-align:right;
 color:#777;
 font-size:10px;
-line-height:1.9
+line-height:1.9;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:14px
+gap:14px;
 }
 
 .work{
@@ -305,16 +340,16 @@ background:#0d0f12;
 border:1px solid #292d33;
 cursor:pointer;
 transition:.4s;
-overflow:hidden
+overflow:hidden;
 }
 
 .work:hover{
 transform:translateY(-7px);
-border-color:#70757b
+border-color:#70757b;
 }
 
 .work:nth-child(3n){
-grid-column:span 2
+grid-column:span 2;
 }
 
 .work img{
@@ -322,52 +357,56 @@ width:100%;
 height:390px;
 object-fit:cover;
 display:block;
-transition:.7s
+transition:.7s;
 }
 
-.work:nth-child(3n) img{height:560px}
+.work:nth-child(3n) img{
+height:560px;
+}
 
 .work:hover img{
-transform:scale(1.025)
+transform:scale(1.025);
 }
 
-.work-info{padding:22px}
+.work-info{
+padding:22px;
+}
 
 .work-info small{
 font:8px "DM Mono";
 letter-spacing:2px;
-color:#777
+color:#777;
 }
 
 .work-info h3{
 font:500 32px "Playfair Display";
-margin:8px 0
+margin:8px 0;
 }
 
 .work-info p{
 font-size:10px;
 line-height:1.9;
-color:#777
+color:#777;
 }
 
 .work-info .hint{
 color:var(--yellow);
 margin-top:10px;
 font:8px "DM Mono";
-letter-spacing:1px
+letter-spacing:1px;
 }
 
 .about-art{
 display:grid;
 grid-template-columns:1.15fr .85fr;
 gap:14px;
-margin-top:55px
+margin-top:55px;
 }
 
 .about-art img{
 width:100%;
 height:520px;
-object-fit:cover
+object-fit:cover;
 }
 
 .about-box{
@@ -375,18 +414,18 @@ border:1px solid #30343a;
 padding:35px;
 display:flex;
 justify-content:center;
-flex-direction:column
+flex-direction:column;
 }
 
 .about-box h3{
 font:500 42px "Playfair Display";
-margin:15px 0
+margin:15px 0;
 }
 
 .about-box p{
 font-size:11px;
 line-height:2;
-color:#777
+color:#777;
 }
 
 .style-grid{
@@ -394,30 +433,30 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:1px;
 background:#30343a;
-margin-top:60px
+margin-top:60px;
 }
 
 .style-card{
 background:#0d1015;
 padding:38px;
-min-height:260px
+min-height:260px;
 }
 
 .style-card small{
 font:8px "DM Mono";
 letter-spacing:2px;
-color:var(--yellow)
+color:var(--yellow);
 }
 
 .style-card h3{
 font:500 31px "Playfair Display";
-margin:52px 0 12px
+margin:52px 0 12px;
 }
 
 .style-card p{
 font-size:10px;
 line-height:1.9;
-color:#777
+color:#777;
 }
 
 .quote{
@@ -426,21 +465,23 @@ display:grid;
 place-items:center;
 text-align:center;
 background:
-radial-gradient(circle at 50% 50%,#234fd82c,transparent 35%)
+radial-gradient(circle at 50% 50%,#234fd82c,transparent 35%);
 }
 
 .quote h2{
-font:500 clamp(58px,9vw,125px)/.77 "Playfair Display"
+font:500 clamp(58px,9vw,125px)/.77 "Playfair Display";
 }
 
-.quote h2 em{color:var(--yellow)}
+.quote h2 em{
+color:var(--yellow);
+}
 
 .quote p{
 max-width:650px;
 color:#777;
 font-size:11px;
 line-height:2;
-margin:35px auto
+margin:35px auto;
 }
 
 .final{
@@ -451,21 +492,23 @@ place-items:center;
 text-align:center;
 background:
 radial-gradient(circle at 50% 25%,#ffd43b1c,transparent 35%),
-#07090d
+#07090d;
 }
 
 .final h2{
-font:500 clamp(65px,11vw,150px)/.75 "Playfair Display"
+font:500 clamp(65px,11vw,150px)/.75 "Playfair Display";
 }
 
-.final h2 em{color:var(--yellow)}
+.final h2 em{
+color:var(--yellow);
+}
 
 .final p{
 max-width:590px;
 color:#777;
 font-size:12px;
 line-height:2;
-margin:35px auto
+margin:35px auto;
 }
 
 footer{
@@ -475,7 +518,7 @@ display:flex;
 justify-content:space-between;
 color:#666;
 font:8px "DM Mono";
-letter-spacing:2px
+letter-spacing:2px;
 }
 
 .modal{
@@ -486,10 +529,12 @@ inset:0;
 background:#000e;
 backdrop-filter:blur(13px);
 padding:20px;
-place-items:center
+place-items:center;
 }
 
-.modal.open{display:grid}
+.modal.open{
+display:grid;
+}
 
 .modalbox{
 position:relative;
@@ -499,38 +544,42 @@ overflow:auto;
 background:#111419;
 border:1px solid #444;
 display:grid;
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
 }
 
 .modalbox img{
 width:100%;
 height:100%;
 min-height:650px;
-object-fit:cover
+object-fit:cover;
 }
 
-.modaltext{padding:55px 42px}
+.modaltext{
+padding:55px 42px;
+}
 
 .modaltext small{
 font:8px "DM Mono";
 letter-spacing:3px;
-color:var(--yellow)
+color:var(--yellow);
 }
 
 .modaltext h2{
 font:500 52px "Playfair Display";
 line-height:.9;
-margin:17px 0 28px
+margin:17px 0 28px;
 }
 
 .modaltext p{
 font-size:10px;
 line-height:1.95;
 color:#888;
-margin-bottom:22px
+margin-bottom:22px;
 }
 
-.modaltext p b{color:#eee}
+.modaltext p b{
+color:#eee;
+}
 
 .factsline{
 border-top:1px solid #30343a;
@@ -539,14 +588,14 @@ display:grid;
 grid-template-columns:1fr 1fr;
 gap:10px;
 font:8px "DM Mono";
-color:#666
+color:#666;
 }
 
 .factsline b{
 display:block;
 color:#eee;
 margin-top:5px;
-font-weight:400
+font-weight:400;
 }
 
 .close{
@@ -557,32 +606,34 @@ border:0;
 background:none;
 color:white;
 font-size:32px;
-cursor:pointer
+cursor:pointer;
 }
 
 .reveal{
 opacity:1;
 transform:none;
-transition:1s cubic-bezier(.2,.7,.2,1)
+transition:1s cubic-bezier(.2,.7,.2,1);
 }
 
 .reveal.show{
 opacity:1;
-transform:none
+transform:none;
 }
 
 @media(max-width:850px){
 
-nav{gap:10px}
+nav{
+gap:10px;
+}
 
 nav a:nth-child(2),
 nav a:nth-child(4){
-display:none
+display:none;
 }
 
 .hero{
 display:block;
-padding-top:120px
+padding-top:120px;
 }
 
 .hero-img{
@@ -591,85 +642,1169 @@ right:auto;
 top:auto;
 width:75%;
 height:350px;
-margin:35px 0 0 25%
+margin:35px 0 0 25%;
 }
 
-.hero h1{font-size:18vw}
+.hero h1{
+font-size:18vw;
+}
 
-.two,.about-art{
+.two,
+.about-art{
 grid-template-columns:1fr;
-gap:45px
+gap:45px;
 }
 
 .stats{
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
 }
 
 .stat:nth-child(3){
 grid-column:span 2;
 border-top:1px solid var(--line);
-padding-left:0
+padding-left:0;
 }
 
 .timeline{
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
 }
 
-.time{min-height:280px}
+.time{
+min-height:280px;
+}
 
 .gallery{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .work:nth-child(3n){
-grid-column:auto
+grid-column:auto;
 }
 
 .work img,
 .work:nth-child(3n) img{
-height:340px
+height:340px;
 }
 
 .style-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .modalbox{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .modalbox img{
 min-height:300px;
-height:300px
+height:300px;
 }
 
 .modaltext{
-padding:40px 25px
+padding:40px 25px;
 }
 
 footer{
 display:block;
-line-height:2.5
+line-height:2.5;
 }
 }
 
 @media(max-width:500px){
 
 .stats{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .stat:nth-child(3){
-grid-column:auto
+grid-column:auto;
 }
 
 .timeline{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .title{
-font-size:16vw
+font-size:16vw;
 }
 }
 </style>
 </head>
+<body>
+
+<header id="header">
+  <div class="logo">VAN GOGH</div>
+
+  <nav>
+    <a href="#inicio">INÍCIO</a>
+    <a href="#vida">A VIDA</a>
+    <a href="#obras">OBRAS</a>
+    <a href="#estilo">ESTILO</a>
+    <a href="#final">EXPOSIÇÃO</a>
+  </nav>
+</header>
+
+
+<main>
+
+<section class="hero" id="inicio">
+
+  <div class="stars"></div>
+
+  <div class="hero-copy reveal">
+
+    <div class="eyebrow">
+      MUSEU VIRTUAL · VINCENT VAN GOGH
+    </div>
+
+    <h1>
+      Uma vida<br>
+      em <em>cores.</em>
+    </h1>
+
+    <p>
+      Entre pinceladas intensas, noites estreladas e campos de
+      amarelo vibrante, <strong>Vincent van Gogh</strong> transformou
+      sentimentos em pintura e deixou uma das obras mais marcantes
+      da história da arte.
+    </p>
+
+    <a class="btn" href="#obras">
+      ENTRAR NA EXPOSIÇÃO ↓
+    </a>
+
+  </div>
+
+  <img
+    class="hero-img"
+    src="IMG_9032.jpeg"
+    alt="A Noite Estrelada"
+  >
+
+</section>
+
+
+<div class="ticker">
+  <span>
+    VINCENT VAN GOGH · ARTE · COR · EMOÇÃO · 1853 — 1890 ·
+    VINCENT VAN GOGH · ARTE · COR · EMOÇÃO · 1853 — 1890 ·
+  </span>
+</div>
+
+
+<section id="vida">
+
+  <div class="two">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        01 · A VIDA
+      </div>
+
+      <h2 class="title">
+        Antes da<br>
+        <em>lenda.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="copy reveal">
+
+      <p>
+        Vincent Willem van Gogh nasceu em <strong>30 de março de
+        1853</strong>, em Zundert, nos Países Baixos. Antes de se
+        tornar um dos artistas mais conhecidos do mundo, passou por
+        diferentes profissões e caminhos até encontrar na pintura
+        uma forma de expressar aquilo que sentia.
+      </p>
+
+      <p>
+        Sua carreira artística foi relativamente curta. Van Gogh
+        começou a dedicar-se seriamente à arte por volta dos
+        <strong>27 anos</strong>, mas produziu uma quantidade enorme
+        de pinturas e desenhos durante a década seguinte.
+      </p>
+
+      <p>
+        Sua produção foi marcada por paisagens, retratos, interiores
+        e cenas do cotidiano. As cores passaram a ter um papel cada
+        vez mais importante, e suas pinceladas tornaram-se fortes,
+        visíveis e cheias de movimento.
+      </p>
+
+      <p>
+        Van Gogh morreu em <strong>29 de julho de 1890</strong>,
+        aos 37 anos. Durante sua vida, seu trabalho recebeu pouco
+        reconhecimento. Após sua morte, porém, sua arte ganhou
+        enorme importância e influenciou gerações de artistas.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="stats reveal">
+
+    <div class="stat">
+      <small>NASCIMENTO</small>
+      <b>1853</b>
+      <span>Zundert · Países Baixos</span>
+    </div>
+
+    <div class="stat">
+      <small>VIDA ARTÍSTICA</small>
+      <b>≈ 10 anos</b>
+      <span>Uma produção intensa</span>
+    </div>
+
+    <div class="stat">
+      <small>MORTE</small>
+      <b>1890</b>
+      <span>Auvers-sur-Oise · França</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="dark">
+
+  <div class="eyebrow">
+    02 · UMA VIDA EM MOVIMENTO
+  </div>
+
+  <h2 class="title">
+    Dez anos.<br>
+    <em>Milhares de marcas.</em>
+  </h2>
+
+
+  <div class="timeline">
+
+    <div class="time reveal">
+      <small>1853</small>
+      <h3>O começo</h3>
+      <p>
+        Vincent nasce em Zundert, no sul dos Países Baixos,
+        em uma família ligada à religião e à vida comunitária.
+      </p>
+    </div>
+
+
+    <div class="time reveal">
+      <small>1870s</small>
+      <h3>Procurando um caminho</h3>
+      <p>
+        Trabalha no comércio de arte, envolve-se com religião
+        e passa por diferentes experiências antes de escolher
+        definitivamente a pintura.
+      </p>
+    </div>
+
+
+    <div class="time reveal">
+      <small>1885</small>
+      <h3>Os camponeses</h3>
+      <p>
+        Em Nuenen, desenvolve uma pintura mais escura e concentrada
+        na vida dos trabalhadores rurais. É nesse período que
+        pinta Os Comedores de Batatas.
+      </p>
+    </div>
+
+
+    <div class="time reveal">
+      <small>1888</small>
+      <h3>Arles</h3>
+      <p>
+        Na França, sua paleta ganha cores muito mais vibrantes.
+        Amarelos, azuis e verdes passam a dominar muitas de suas
+        pinturas.
+      </p>
+    </div>
+
+
+    <div class="time reveal">
+      <small>1890</small>
+      <h3>O legado</h3>
+      <p>
+        Van Gogh morre em Auvers-sur-Oise. Sua obra, porém,
+        continuaria crescendo em importância muito depois de sua
+        morte.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="obras">
+
+  <div class="works-head">
+
+    <div>
+      <div class="eyebrow">
+        03 · COLEÇÃO
+      </div>
+
+      <h2 class="title">
+        Dez <em>visões.</em>
+      </h2>
+    </div>
+
+    <p>
+      Clique em cada obra para entrar em uma pequena sala da
+      exposição e conhecer sua história, contexto e importância.
+    </p>
+
+  </div>
+
+
+  <div class="gallery">
+
+
+    <!-- OBRA 01 -->
+
+    <article class="work reveal"
+      onclick="openModal(0)">
+
+      <img
+        src="IMG_9032.jpeg"
+        alt="A Noite Estrelada"
+      >
+
+      <div class="work-info">
+
+        <small>01 · 1889</small>
+
+        <h3>A Noite Estrelada</h3>
+
+        <p>
+          Uma das pinturas mais famosas da história da arte,
+          marcada por um céu em movimento e estrelas luminosas.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 02 -->
+
+    <article class="work reveal"
+      onclick="openModal(1)">
+
+      <img
+        src="IMG_9033.jpeg"
+        alt="Girassóis"
+      >
+
+      <div class="work-info">
+
+        <small>02 · 1888</small>
+
+        <h3>Girassóis</h3>
+
+        <p>
+          A série em que Van Gogh transforma flores simples
+          em uma celebração intensa do amarelo.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 03 -->
+
+    <article class="work reveal"
+      onclick="openModal(2)">
+
+      <img
+        src="IMG_9034.jpeg"
+        alt="O Quarto"
+      >
+
+      <div class="work-info">
+
+        <small>03 · 1888</small>
+
+        <h3>O Quarto</h3>
+
+        <p>
+          Um interior simples transformado pela cor,
+          pela perspectiva e pela vontade de transmitir
+          uma sensação de descanso.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 04 -->
+
+    <article class="work reveal"
+      onclick="openModal(3)">
+
+      <img
+        src="IMG_9035.jpeg"
+        alt="Íris"
+      >
+
+      <div class="work-info">
+
+        <small>04 · 1890</small>
+
+        <h3>Íris</h3>
+
+        <p>
+          Flores azuis e violetas ocupam a tela com uma energia
+          visual criada pelo contraste das cores.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 05 -->
+
+    <article class="work reveal"
+      onclick="openModal(4)">
+
+      <img
+        src="IMG_9036.jpeg"
+        alt="A Casa Amarela"
+      >
+
+      <div class="work-info">
+
+        <small>05 · 1888</small>
+
+        <h3>A Casa Amarela</h3>
+
+        <p>
+          O edifício amarelo de Arles representava para Van Gogh
+          a ideia de um espaço onde artistas poderiam viver
+          e trabalhar juntos.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 06 -->
+
+    <article class="work reveal"
+      onclick="openModal(5)">
+
+      <img
+        src="IMG_9037.jpeg"
+        alt="A Igreja de Auvers"
+      >
+
+      <div class="work-info">
+
+        <small>06 · 1890</small>
+
+        <h3>A Igreja de Auvers</h3>
+
+        <p>
+          Uma arquitetura aparentemente familiar ganha formas
+          ondulantes e uma atmosfera profundamente expressiva.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 07 -->
+
+    <article class="work reveal"
+      onclick="openModal(6)">
+
+      <img
+        src="IMG_9038.jpeg"
+        alt="Os Comedores de Batatas"
+      >
+
+      <div class="work-info">
+
+        <small>07 · 1885</small>
+
+        <h3>Os Comedores de Batatas</h3>
+
+        <p>
+          Uma família camponesa reunida ao redor de uma mesa.
+          A obra mostra uma fase inicial e mais escura da pintura
+          de Van Gogh.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 08 -->
+
+    <article class="work reveal"
+      onclick="openModal(7)">
+
+      <img
+        src="IMG_9039.jpeg"
+        alt="Retrato de Joseph Roulin"
+      >
+
+      <div class="work-info">
+
+        <small>08 · 1888</small>
+
+        <h3>Joseph Roulin</h3>
+
+        <p>
+          Um retrato marcado pelo azul e pelo amarelo,
+          mostrando a personalidade do carteiro de Arles.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 09 -->
+
+    <article class="work reveal"
+      onclick="openModal(8)">
+
+      <img
+        src="IMG_9040.jpeg"
+        alt="La Berceuse"
+      >
+
+      <div class="work-info">
+
+        <small>09 · 1889</small>
+
+        <h3>La Berceuse</h3>
+
+        <p>
+          Uma mulher sentada aparece diante de um fundo vibrante,
+          criando uma composição relacionada à ideia de conforto
+          e tranquilidade.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 10 -->
+
+    <article class="work reveal"
+      onclick="openModal(9)">
+
+      <img
+        src="IMG_9041.jpeg"
+        alt="Café Terrace at Night"
+      >
+
+      <div class="work-info">
+
+        <small>10 · 1888</small>
+
+        <h3>Café Terrace at Night</h3>
+
+        <p>
+          Uma rua de Arles iluminada pelo café amarelo,
+          contrastando com o azul profundo da noite.
+        </p>
+
+        <div class="hint">
+          ABRIR OBRA →
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<section class="dark" id="estilo">
+
+  <div class="two">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        04 · O OLHAR DE VAN GOGH
+      </div>
+
+      <h2 class="title">
+        Pintar não era<br>
+        apenas <em>ver.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="copy reveal">
+
+      <p>
+        Van Gogh não buscava simplesmente reproduzir aquilo
+        que estava diante de seus olhos. Ele utilizava a pintura
+        para construir uma experiência visual e emocional.
+      </p>
+
+      <p>
+        Por isso, suas árvores podem parecer se mover, o céu
+        pode ganhar formas circulares e as cores podem ser
+        muito mais intensas do que seriam na realidade.
+      </p>
+
+      <p>
+        A pincelada é uma parte essencial de sua linguagem.
+        Em vez de esconder o gesto do artista, Van Gogh deixa
+        que ele apareça na superfície da tela.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="style-grid">
+
+
+    <div class="style-card reveal">
+
+      <small>01 · COR</small>
+
+      <h3>Amarelo</h3>
+
+      <p>
+        O amarelo aparece repetidamente em sua produção:
+        girassóis, casas, cafés, campos e estrelas. A cor
+        podia criar calor, luminosidade e intensidade.
+      </p>
+
+    </div>
+
+
+    <div class="style-card reveal">
+
+      <small>02 · MOVIMENTO</small>
+
+      <h3>Pinceladas</h3>
+
+      <p>
+        As pinceladas visíveis fazem a superfície parecer
+        viva. Linhas, curvas e pequenos traços conduzem
+        o olhar de quem observa.
+      </p>
+
+    </div>
+
+
+    <div class="style-card reveal">
+
+      <small>03 · CONTRASTE</small>
+
+      <h3>Azul + amarelo</h3>
+
+      <p>
+        Van Gogh explorou intensamente relações entre cores
+        contrastantes. O encontro entre azuis profundos e
+        amarelos luminosos tornou-se uma de suas marcas.
+      </p>
+
+    </div>
+
+
+    <div class="style-card reveal">
+
+      <small>04 · EMOÇÃO</small>
+
+      <h3>Sentimento</h3>
+
+      <p>
+        Suas pinturas carregam atmosferas diferentes:
+        tranquilidade, solidão, energia, contemplação,
+        esperança e inquietação.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="about-art">
+
+    <img
+      src="IMG_9032.jpeg"
+      alt="Detalhe de A Noite Estrelada"
+      class="reveal"
+    >
+
+
+    <div class="about-box reveal">
+
+      <div class="eyebrow">
+        UMA PINTURA QUE CONTINUA VIVA
+      </div>
+
+      <h3>
+        Por que Van Gogh ainda importa?
+      </h3>
+
+      <p>
+        Porque suas pinturas não parecem distantes.
+        Mesmo produzidas no século XIX, elas continuam
+        transmitindo sensações que podemos reconhecer hoje.
+      </p>
+
+      <p>
+        Sua história também mudou a maneira como pensamos
+        sobre o artista: alguém que não precisa apenas
+        representar o mundo, mas pode transformá-lo através
+        de sua própria percepção.
+      </p>
+
+      <p>
+        O impacto de Van Gogh ultrapassou a pintura.
+        Sua linguagem visual passou a influenciar diferentes
+        gerações de artistas e continua presente na cultura
+        visual contemporânea.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="quote">
+
+  <div class="reveal">
+
+    <div class="eyebrow">
+      05 · A ARTE DE SENTIR
+    </div>
+
+    <h2>
+      O mundo<br>
+      em <em>movimento.</em>
+    </h2>
+
+    <p>
+      Talvez seja essa uma das maiores forças da pintura
+      de Van Gogh: depois de olhar para uma de suas obras,
+      é difícil continuar enxergando o mundo exatamente
+      da mesma maneira.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="final" id="final">
+
+  <div class="reveal">
+
+    <div class="eyebrow">
+      FIM DA EXPOSIÇÃO
+    </div>
+
+    <h2>
+      A exposição<br>
+      fica em <em>você.</em>
+    </h2>
+
+    <p>
+      Van Gogh passou poucos anos dedicando-se à pintura,
+      mas suas cores atravessaram gerações. Suas obras
+      continuam nos lembrando que a arte pode transformar
+      uma paisagem, uma pessoa ou uma noite comum em algo
+      impossível de esquecer.
+    </p>
+
+    <a class="btn" href="#inicio">
+      VOLTAR AO INÍCIO ↑
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <span>
+    VINCENT VAN GOGH · MUSEU VIRTUAL
+  </span>
+
+  <span>
+    PROJETO ESCOLAR · 2026
+  </span>
+
+</footer>
+
+
+<!-- MODAL DAS OBRAS -->
+
+<div class="modal" id="modal">
+
+  <div class="modalbox">
+
+    <button class="close" onclick="closeModal()">
+      ×
+    </button>
+
+    <img id="modalImage" src="" alt="">
+
+    <div class="modaltext">
+
+      <small id="modalNumber"></small>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalIntro"></p>
+
+      <p>
+        <b>O que você está vendo?</b><br>
+        <span id="modalSeeing"></span>
+      </p>
+
+      <p>
+        <b>Contexto</b><br>
+        <span id="modalContext"></span>
+      </p>
+
+      <p>
+        <b>Por que essa obra é importante?</b><br>
+        <span id="modalImportance"></span>
+      </p>
+
+      <div class="factsline">
+
+        <div>
+          ANO
+          <b id="modalYear"></b>
+        </div>
+
+        <div>
+          LOCAL
+          <b id="modalPlace"></b>
+        </div>
+
+        <div>
+          TÉCNICA
+          <b id="modalTechnique"></b>
+        </div>
+
+        <div>
+          ARTISTA
+          <b>Vincent van Gogh</b>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+const works = [
+
+  {
+    number:"01 · A NOITE ESTRELADA",
+    title:"A Noite Estrelada",
+    image:"IMG_9032.jpeg",
+    intro:"Pintada em junho de 1889, A Noite Estrelada apresenta uma paisagem noturna dominada por um céu azul profundo, estrelas luminosas e movimentos circulares.",
+    seeing:"O céu ocupa grande parte da composição. As estrelas parecem irradiar luz, enquanto as linhas curvas criam uma sensação de movimento contínuo. No primeiro plano aparece um cipreste escuro que conecta a terra ao céu.",
+    context:"Van Gogh realizou a pintura enquanto estava internado no asilo de Saint-Rémy-de-Provence. A paisagem foi inspirada pela vista que ele tinha de sua janela, mas a composição foi transformada artisticamente.",
+    importance:"A obra se tornou um dos maiores símbolos da arte de Van Gogh e é frequentemente lembrada pela maneira como transforma uma paisagem em uma experiência emocional.",
+    year:"1889",
+    place:"Saint-Rémy-de-Provence",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"02 · GIRASSÓIS",
+    title:"Girassóis",
+    image:"IMG_9033.jpeg",
+    intro:"Os girassóis aparecem em uma das séries mais conhecidas de Van Gogh. As flores são apresentadas com diferentes tons de amarelo, criando uma composição intensa e luminosa.",
+    seeing:"Vemos um conjunto de girassóis dentro de um vaso. Algumas flores estão abertas, enquanto outras aparecem secas ou inclinadas. As diferentes formas criam ritmo e variedade.",
+    context:"Van Gogh pintou várias versões de girassóis durante seu período em Arles. As obras faziam parte de seu desejo de decorar a Casa Amarela para receber outros artistas.",
+    importance:"A série demonstra sua exploração das possibilidades expressivas de uma única família de cores e se tornou uma das imagens mais reconhecíveis de sua produção.",
+    year:"1888",
+    place:"Arles",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"03 · O QUARTO",
+    title:"O Quarto",
+    image:"IMG_9034.jpeg",
+    intro:"O Quarto representa o interior do quarto de Van Gogh na Casa Amarela, em Arles.",
+    seeing:"A cama, as cadeiras, a mesa, os quadros e outros objetos são organizados em uma pequena sala. As paredes e os móveis recebem cores fortes, enquanto a perspectiva cria uma sensação particular de espaço.",
+    context:"Van Gogh pintou diferentes versões dessa composição. Ele queria transmitir uma sensação de descanso e tranquilidade através da cor.",
+    importance:"A obra mostra como um espaço cotidiano poderia se transformar em uma composição visual cheia de personalidade.",
+    year:"1888",
+    place:"Arles",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"04 · ÍRIS",
+    title:"Íris",
+    image:"IMG_9035.jpeg",
+    intro:"Íris apresenta flores individuais em diferentes posições sobre um fundo claro.",
+    seeing:"As formas das flores são construídas por pinceladas rápidas e marcadas. Os tons violetas e azuis contrastam com o fundo e criam uma imagem cheia de movimento.",
+    context:"Van Gogh pintou a obra em 1890, durante seu período no asilo de Saint-Paul-de-Mausole.",
+    importance:"A pintura demonstra sua habilidade de encontrar movimento e beleza em um tema aparentemente simples, usando principalmente a força das cores e das pinceladas.",
+    year:"1890",
+    place:"Saint-Rémy-de-Provence",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"05 · A CASA AMARELA",
+    title:"A Casa Amarela",
+    image:"IMG_9036.jpeg",
+    intro:"A Casa Amarela mostra o edifício onde Van Gogh viveu em Arles e onde imaginava criar uma comunidade de artistas.",
+    seeing:"O prédio amarelo ocupa uma posição central. A rua, as pessoas e os demais edifícios ajudam a criar uma cena urbana cotidiana.",
+    context:"Van Gogh alugou parte da casa e sonhava transformá-la em um espaço compartilhado por artistas. Paul Gauguin chegou a passar um período com ele em Arles.",
+    importance:"A obra representa não apenas um prédio, mas também o sonho de Van Gogh de construir uma vida artística coletiva.",
+    year:"1888",
+    place:"Arles",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"06 · A IGREJA DE AUVERS",
+    title:"A Igreja de Auvers",
+    image:"IMG_9037.jpeg",
+    intro:"A Igreja de Auvers apresenta uma igreja gótica cercada por um caminho e uma paisagem verde.",
+    seeing:"A estrutura parece ganhar movimento através das linhas curvas. O céu azul e o verde da paisagem contrastam com as cores mais escuras do edifício.",
+    context:"Van Gogh pintou a obra durante seus últimos meses de vida, enquanto estava em Auvers-sur-Oise.",
+    importance:"A pintura demonstra como, mesmo no fim de sua carreira, Van Gogh continuava experimentando formas, cores e perspectivas.",
+    year:"1890",
+    place:"Auvers-sur-Oise",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"07 · OS COMEDORES DE BATATAS",
+    title:"Os Comedores de Batatas",
+    image:"IMG_9038.jpeg",
+    intro:"A obra mostra uma família camponesa reunida ao redor de uma mesa durante uma refeição.",
+    seeing:"Cinco pessoas aparecem em uma sala escura, iluminada principalmente por uma pequena lâmpada. A paleta marrom e verde cria uma atmosfera pesada e realista.",
+    context:"Van Gogh realizou a pintura em Nuenen, nos Países Baixos. Ele queria representar trabalhadores rurais de maneira direta, mostrando suas condições simples de vida.",
+    importance:"É considerada uma das obras fundamentais da primeira fase de Van Gogh e revela um artista ainda muito diferente daquele das paisagens coloridas de seus últimos anos.",
+    year:"1885",
+    place:"Nuenen",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"08 · JOSEPH ROULIN",
+    title:"Retrato de Joseph Roulin",
+    image:"IMG_9039.jpeg",
+    intro:"Joseph Roulin era carteiro em Arles e tornou-se amigo de Van Gogh. O artista realizou diversos retratos dele e de sua família.",
+    seeing:"Roulin aparece sentado, usando seu uniforme azul. A barba, o rosto e as roupas são construídos com pinceladas fortes e cores contrastantes.",
+    context:"Van Gogh conheceu Roulin durante seu período em Arles. O carteiro e sua família tornaram-se importantes modelos para o artista.",
+    importance:"O retrato mostra como Van Gogh usava cores não apenas para representar a aparência, mas também para criar presença e personalidade.",
+    year:"1888",
+    place:"Arles",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"09 · LA BERCEUSE",
+    title:"La Berceuse",
+    image:"IMG_9040.jpeg",
+    intro:"La Berceuse apresenta uma mulher sentada segurando uma corda ligada a um berço que está fora do campo de visão.",
+    seeing:"A figura aparece centralizada diante de um fundo intenso. As cores e as linhas decorativas fazem com que a personagem pareça ocupar um espaço quase simbólico.",
+    context:"A personagem é Augustine Roulin, esposa de Joseph Roulin. Van Gogh realizou diferentes versões da composição.",
+    importance:"A obra estava ligada à ideia de conforto e descanso. Para Van Gogh, a pintura poderia transmitir uma sensação semelhante à de uma canção de ninar.",
+    year:"1889",
+    place:"Arles / Saint-Rémy",
+    technique:"Óleo sobre tela"
+  },
+
+
+  {
+    number:"10 · CAFÉ TERRACE AT NIGHT",
+    title:"Café Terrace at Night",
+    image:"IMG_9041.jpeg",
+    intro:"Uma rua de Arles ganha uma atmosfera noturna através do contraste entre o amarelo luminoso do café e o azul profundo do céu.",
+    seeing:"O café iluminado ocupa o lado direito da composição. Pessoas caminham pela rua enquanto pequenas estrelas aparecem no céu.",
+    context:"A pintura foi realizada em Arles em setembro de 1888. É uma das primeiras cenas noturnas de Van Gogh e demonstra seu interesse crescente pela representação da noite.",
+    importance:"A obra antecipa algumas das experiências com céus estrelados que apareceriam posteriormente em outras pinturas.",
+    year:"1888",
+    place:"Arles",
+    technique:"Óleo sobre tela"
+  }
+
+];
+
+
+function openModal(index){
+
+  const work = works[index];
+
+  document.getElementById("modalImage").src = work.image;
+  document.getElementById("modalImage").alt = work.title;
+
+  document.getElementById("modalNumber").textContent = work.number;
+  document.getElementById("modalTitle").textContent = work.title;
+
+  document.getElementById("modalIntro").textContent = work.intro;
+  document.getElementById("modalSeeing").textContent = work.seeing;
+  document.getElementById("modalContext").textContent = work.context;
+  document.getElementById("modalImportance").textContent = work.importance;
+
+  document.getElementById("modalYear").textContent = work.year;
+  document.getElementById("modalPlace").textContent = work.place;
+  document.getElementById("modalTechnique").textContent = work.technique;
+
+  document.getElementById("modal").classList.add("open");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeModal(){
+
+  document.getElementById("modal").classList.remove("open");
+
+  document.body.style.overflow = "";
+}
+
+
+document.getElementById("modal").addEventListener("click",function(e){
+
+  if(e.target === this){
+    closeModal();
+  }
+
+});
+
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key === "Escape"){
+    closeModal();
+  }
+
+});
+
+
+window.addEventListener("scroll",function(){
+
+  const header = document.getElementById("header");
+
+  if(window.scrollY > 40){
+    header.classList.add("scrolled");
+  }else{
+    header.classList.remove("scrolled");
+  }
+
+});
+
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if("IntersectionObserver" in window){
+
+  const observer = new IntersectionObserver(
+    (entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold:.08
+    }
+  );
+
+  revealElements.forEach((el)=>{
+    observer.observe(el);
+  });
+
+}
+
+</script>
+
+</body>
+</html>
